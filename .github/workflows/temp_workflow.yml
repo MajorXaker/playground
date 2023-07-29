@@ -24,10 +24,9 @@ jobs:
       image: python:3.11-buster
 
     steps:
-
+      - uses: actions/checkout@v3
       - name: Check DB connection
         run: |
-          ls -la
-#          pip install pipenv
-#          pipenv install --deploy --system --dev
-#          python -m connection_test
+          pip install pipenv
+          pipenv install --deploy --system --dev
+          python -m connection_test
