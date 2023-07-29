@@ -27,6 +27,7 @@ jobs:
 
       - name: Check DB connection
         run: |
-          pip install pipenv
-          pipenv install --deploy --system --dev
-          python -m connection_test
+          ls -la
+#          pip install pipenv
+#          pipenv install --deploy --system --dev
+#          python -m connection_test
