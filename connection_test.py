@@ -17,7 +17,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 
 async def main():
     db_url = (
-        f"postgresql://postgres:postgres@localhost:5432/postgres"
+        f"postgresql://postgres:postgres@postgres:5432/postgres"
     )
     print(f"Starting connection on '{db_url}'")
     conn = await asyncpg.connect(db_url)
