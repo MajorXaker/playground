@@ -10,8 +10,6 @@ ARG DATABASE_PASSWORD
 #    echo $ENV_FOR_DYNACONF \
 #    echo $DATABASE_PASSWORD
 
-RUN pr
-
 RUN echo "[$ENV_FOR_DYNACONF]">> .secrets.toml;  \
     echo "\tDATABASE_PASSWORD = '$DATABASE_PASSWORD'">> .secrets.toml; \
     cat .secrets.toml
