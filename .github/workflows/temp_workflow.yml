@@ -37,9 +37,10 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-#          build-args: |
-#            ENV_FOR_DYNACONF="development"
-          secrets: |
-            ENV_FOR_DYNACONF=development
+          build-args: |
+            ENV_FOR_DYNACONF="development"
             DATABASE_PASSWORD=${{ secrets.DB_PASSWORD }}
+#          secrets: |
+#            ENV_FOR_DYNACONF=development
+#            DATABASE_PASSWORD=${{ secrets.DB_PASSWORD }}
 
